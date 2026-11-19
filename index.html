@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Photo Weavers | Landing Page Example</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#fff;}</style>
+</head>
+<body>
+<!-- ======================================================================
+  PHOTO WEAVERS LANDING PAGE  (catch-all for social + ad traffic)
+
+  HOW TO USE (Shopify):
+    Online Store > Pages > Add page > Show HTML (<>) and paste everything below,
+    OR add a "Custom Liquid" section to a page template and paste it there.
+    The page is self-contained: every style is scoped under .pwlp so it won't touch your theme.
+
+  PLACEHOLDERS: anything written like [[THIS]] is a fact or link only you can fill in.
+    (Double square brackets on purpose: Shopify treats curly braces as Liquid code.)
+    Search the file for "[[" to find them all. Search for "EDIT:" for image and copy spots.
+    The big ones: [[CUSTOMIZER_URL]], [[RATING]], [[REVIEW_COUNT]], [[TURNAROUND]], [[GUARANTEE]].
+    Please verify every claim in the "woven vs printed" and "how it's made" sections against
+    how your product is really made before publishing.
+
+  COLORS: change the five variables at the top of the <style> block.
+====================================================================== -->
+
+<style>
+.pwlp{
+  --ink:#1B2A41; --ink-soft:#4A5568; --cream:#F6F1EA; --line:#E2D9CC; --accent:#B4543A; --accent-dark:#8F3F29; --white:#FFFFFF;
+  font-family:'Poppins','Helvetica Neue',Arial,sans-serif; color:var(--ink); line-height:1.6; font-size:17px;
+  -webkit-text-size-adjust:100%; box-sizing:border-box;
+}
+.pwlp *,.pwlp *::before,.pwlp *::after{box-sizing:border-box;}
+.pwlp img{max-width:100%;height:auto;display:block;border:0;}
+.pwlp h1,.pwlp h2,.pwlp h3{font-family:'Libre Baskerville',Georgia,'Times New Roman',serif;font-weight:400;color:var(--ink);margin:0;line-height:1.2;}
+.pwlp h1{font-size:clamp(34px,6vw,56px);}
+.pwlp h2{font-size:clamp(28px,4.4vw,40px);text-align:center;}
+.pwlp h3{font-size:21px;line-height:1.3;}
+.pwlp p{margin:0;}
+.pwlp a{color:inherit;}
+.pwlp .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+.pwlp .sec{padding:72px 0;}
+.pwlp .sec.alt{background:var(--cream);}
+.pwlp .eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);text-align:center;margin-bottom:12px;}
+.pwlp .lede{max-width:640px;margin:16px auto 0;text-align:center;color:var(--ink-soft);}
+.pwlp .btn{display:inline-block;background:var(--accent);color:var(--white) !important;text-decoration:none !important;padding:17px 38px;font-size:14px;font-weight:500;letter-spacing:2px;text-transform:uppercase;border-radius:2px;line-height:1.2;text-align:center;}
+.pwlp .btn:hover{background:var(--accent-dark);}
+.pwlp .btn.ghost{background:transparent;color:var(--ink) !important;border:1px solid var(--ink);}
+.pwlp .btn.ghost:hover{background:var(--ink);color:var(--white) !important;}
+.pwlp .center{text-align:center;}
+
+/* hero */
+.pwlp .hero{background:var(--cream);padding:48px 0 56px;}
+.pwlp .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.pwlp .hero .eyebrow{text-align:left;}
+.pwlp .hero h1 em{font-style:italic;}
+.pwlp .hero p.sub{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:480px;}
+.pwlp .hero .cta-row{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+.pwlp .hero .micro{margin-top:16px;font-size:14px;color:var(--ink-soft);}
+.pwlp .hero-img img{width:100%;border-radius:4px;}
+
+/* trust bar */
+.pwlp .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white);}
+.pwlp .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:22px 24px;max-width:1100px;margin:0 auto;text-align:center;}
+.pwlp .trust-item{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;line-height:1.5;}
+.pwlp .trust-item b{display:block;font-weight:500;color:var(--accent);font-size:15px;letter-spacing:1px;}
+
+/* steps */
+.pwlp .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px;}
+.pwlp .step{text-align:center;}
+.pwlp .step .num{width:52px;height:52px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Libre Baskerville',Georgia,serif;font-size:22px;}
+.pwlp .step p{margin-top:10px;color:var(--ink-soft);font-size:16px;}
+
+/* compare */
+.pwlp .compare{margin:44px auto 0;max-width:860px;border:1px solid var(--line);background:var(--white);}
+.pwlp .crow{display:grid;grid-template-columns:1.1fr 1.2fr 1.2fr;}
+.pwlp .crow > div{padding:16px 20px;border-top:1px solid var(--line);font-size:16px;}
+.pwlp .crow:first-child > div{border-top:0;}
+.pwlp .chead > div{font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:500;background:var(--cream);}
+.pwlp .chead > div.win{background:var(--ink);color:var(--white);}
+.pwlp .crow .label{font-weight:500;}
+.pwlp .crow .win{background:#FBF8F3;}
+.pwlp .crow .meh{color:var(--ink-soft);}
+
+/* made */
+.pwlp .made{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px;}
+.pwlp .made figure{margin:0;}
+.pwlp .made img{border-radius:3px;width:100%;}
+.pwlp .made figcaption{margin-top:14px;font-size:15px;color:var(--ink-soft);}
+.pwlp .made figcaption b{display:block;font-family:'Libre Baskerville',Georgia,serif;font-weight:400;font-size:18px;color:var(--ink);margin-bottom:4px;}
+
+/* photo guide */
+.pwlp .guide{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px;}
+.pwlp .gcol{background:var(--white);border:1px solid var(--line);padding:28px;}
+.pwlp .gcol h3{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
+.pwlp .badge{display:inline-flex;width:28px;height:28px;border-radius:50%;align-items:center;justify-content:center;font-size:15px;font-family:Arial,sans-serif;color:var(--white);flex:none;}
+.pwlp .badge.yes{background:#2F6B4F;} .pwlp .badge.no{background:var(--accent);}
+.pwlp .gimgs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
+.pwlp .gimgs img{border-radius:3px;width:100%;}
+.pwlp .gcol ul{margin:0;padding:0;list-style:none;}
+.pwlp .gcol li{padding:10px 0 10px 0;border-top:1px solid var(--line);font-size:16px;}
+.pwlp .gcol li:first-child{border-top:0;}
+.pwlp .gcol li b{font-weight:500;}
+.pwlp .help{margin:36px auto 0;max-width:720px;text-align:center;background:var(--white);border:1px dashed var(--accent);padding:26px 24px;}
+.pwlp .help p{color:var(--ink-soft);}
+.pwlp .help p b{color:var(--ink);font-weight:500;}
+
+/* occasions */
+.pwlp .occ{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px;}
+.pwlp .occ a{text-decoration:none;display:block;}
+.pwlp .occ img{border-radius:3px;width:100%;}
+.pwlp .occ h3{margin-top:14px;font-size:19px;text-align:center;}
+.pwlp .occ p{margin-top:4px;font-size:14px;color:var(--ink-soft);text-align:center;}
+
+/* sizes */
+.pwlp .sizes{max-width:760px;margin:40px auto 0;border:1px solid var(--line);background:var(--white);}
+.pwlp .srow{display:grid;grid-template-columns:1.2fr 1fr 1fr;}
+.pwlp .srow > div{padding:15px 20px;border-top:1px solid var(--line);font-size:16px;}
+.pwlp .srow:first-child > div{border-top:0;background:var(--cream);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:500;}
+
+/* reviews */
+.pwlp .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px;}
+.pwlp .rev{background:var(--white);border:1px solid var(--line);padding:28px;}
+.pwlp .stars{color:var(--accent);letter-spacing:3px;font-size:18px;}
+.pwlp .rev p{margin-top:12px;font-size:16px;}
+.pwlp .rev .who{margin-top:16px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-soft);}
+.pwlp .rev-ph{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.pwlp .rev-ph img{border-radius:3px;width:100%;}
+
+/* faq */
+.pwlp .faq{max-width:760px;margin:40px auto 0;}
+.pwlp details{border-top:1px solid var(--line);padding:0;}
+.pwlp details:last-child{border-bottom:1px solid var(--line);}
+.pwlp summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font-family:'Libre Baskerville',Georgia,serif;font-size:19px;position:relative;line-height:1.4;}
+.pwlp summary::-webkit-details-marker{display:none;}
+.pwlp summary::after{content:'+';position:absolute;right:6px;top:16px;font-family:Arial,sans-serif;font-size:28px;color:var(--accent);}
+.pwlp details[open] summary::after{content:'\2212';}
+.pwlp details p{padding:0 0 22px 0;color:var(--ink-soft);font-size:16px;max-width:660px;}
+
+/* final cta */
+.pwlp .final{background:var(--ink);color:var(--white);text-align:center;padding:72px 0;}
+.pwlp .final h2{color:var(--white);}
+.pwlp .final p{margin:16px auto 30px;max-width:560px;color:#D5DBE5;}
+.pwlp .final .btn{background:var(--white);color:var(--ink) !important;}
+.pwlp .final .btn:hover{background:var(--cream);}
+.pwlp .final .micro{margin:18px 0 0;font-size:14px;color:#AEB8C7;}
+
+/* sticky mobile bar */
+.pwlp .sticky{display:none;}
+
+@media (max-width:820px){
+  .pwlp{font-size:16px;}
+  .pwlp .sec{padding:52px 0;}
+  .pwlp .wrap{padding:0 20px;}
+  .pwlp .hero{padding:28px 0 40px;}
+  .pwlp .hero-grid{grid-template-columns:1fr;gap:28px;}
+  .pwlp .hero .eyebrow{text-align:center;}
+  .pwlp .hero-copy{text-align:center;}
+  .pwlp .hero p.sub{margin-left:auto;margin-right:auto;font-size:17px;}
+  .pwlp .hero .cta-row{justify-content:center;}
+  .pwlp .hero-img{order:-1;}
+  .pwlp .trust-grid{grid-template-columns:1fr 1fr;padding:18px 20px;}
+  .pwlp .steps{grid-template-columns:1fr;gap:28px;}
+  .pwlp .made{grid-template-columns:1fr 1fr;}
+  .pwlp .guide{grid-template-columns:1fr;}
+  .pwlp .gcol{padding:22px;}
+  .pwlp .occ{grid-template-columns:1fr 1fr;}
+  .pwlp .reviews{grid-template-columns:1fr;}
+  .pwlp .rev-ph{grid-template-columns:1fr 1fr;}
+  .pwlp .crow{grid-template-columns:1fr 1fr 1fr;}
+  .pwlp .crow > div{padding:12px 12px;font-size:14px;}
+  .pwlp .chead > div{font-size:11px;letter-spacing:1px;}
+  .pwlp .srow > div{padding:12px 12px;font-size:14px;}
+  .pwlp .srow:first-child > div{font-size:11px;letter-spacing:1px;}
+  .pwlp .sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--white);border-top:1px solid var(--line);padding:10px 16px;box-shadow:0 -4px 14px rgba(0,0,0,0.08);}
+  .pwlp .sticky .btn{display:block;padding:15px 20px;}
+  .pwlp .pad-bottom{height:72px;}
+}
+</style>
+
+<div class="pwlp">
+
+  <!-- ================= 1. HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Custom woven photo blankets</p>
+        <!-- EDIT: headline. Keep it about the feeling, not the product. -->
+        <h1>Your favorite photo,<br><em>woven into a blanket</em><br>you&rsquo;ll keep forever.</h1>
+        <p class="sub">Not printed on the surface. Woven thread by thread into soft, durable cotton, so the memory lasts as long as the blanket does.</p>
+        <div class="cta-row">
+          <a class="btn" href="[[CUSTOMIZER_URL]]">Create your blanket</a>
+          <a class="btn ghost" href="#how-it-works">See how it works</a>
+        </div>
+        <p class="micro">[[PREVIEW_LINE: for example, &ldquo;See a preview before you order.&rdquo;]]</p>
+      </div>
+      <div class="hero-img">
+        <!-- EDIT: hero photo, 1200 x 1200 px. A finished blanket in a real home, with a recognizable photo woven in. -->
+        <img src="https://placehold.co/1200x1200/E8D5CF/1B2A41?text=HERO+PHOTO+1200x1200" width="600" height="600" alt="A custom woven photo blanket draped over a sofa">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2. TRUST BAR ================= -->
+  <div class="trust">
+    <div class="trust-grid">
+      <!-- EDIT: only keep claims that are true for Photo Weavers. -->
+      <div class="trust-item"><b>[[RATING]] &#9733;</b>from [[REVIEW_COUNT]] reviews</div>
+      <div class="trust-item"><b>Woven, not printed</b>photo woven into the fabric</div>
+      <div class="trust-item"><b>[[MATERIAL: 100% cotton?]]</b>soft, natural fibers</div>
+      <div class="trust-item"><b>[[TURNAROUND]]</b>from order to your door</div>
+    </div>
+  </div>
+
+  <!-- ================= 3. HOW IT WORKS ================= -->
+  <section class="sec" id="how-it-works">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps. About two minutes.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Upload your photo</h3>
+          <p>Pick a favorite from your phone or computer. Family, a pet, a wedding, a place that matters.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>Choose your size</h3>
+          <p>Pick the blanket size that fits, then [[PREVIEW_STEP: preview how your photo will look]].</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>We weave it and ship it</h3>
+          <p>Your photo is turned into a weaving pattern and woven into your blanket, then sent to you.</p>
+        </div>
+      </div>
+      <div class="center" style="margin-top:44px;"><a class="btn" href="[[CUSTOMIZER_URL]]">Start with your photo</a></div>
+    </div>
+  </section>
+
+  <!-- ================= 4. WOVEN VS PRINTED ================= -->
+  <section class="sec alt">
+    <div class="wrap">
+      <p class="eyebrow">Why woven is different</p>
+      <h2>Not another printed blanket.</h2>
+      <p class="lede">Most photo blankets are fleece or polyester with a picture printed on top. Ours are woven, so the photo is part of the fabric itself.</p>
+      <!-- EDIT: confirm every row below is accurate for your product before publishing. -->
+      <div class="compare">
+        <div class="crow chead"><div></div><div class="win">Photo Weavers</div><div>Printed fleece / polyester</div></div>
+        <div class="crow"><div class="label">The photo</div><div class="win">Woven into the threads</div><div class="meh">Printed on the surface</div></div>
+        <div class="crow"><div class="label">Material</div><div class="win">[[Natural cotton]]</div><div class="meh">Synthetic plastic fibers</div></div>
+        <div class="crow"><div class="label">Over time</div><div class="win">Holds its color and detail</div><div class="meh">Print can fade, crack or peel</div></div>
+        <div class="crow"><div class="label">Feel</div><div class="win">Breathable and soft, gets softer with washing</div><div class="meh">Can feel hot, slick or static-y</div></div>
+        <div class="crow"><div class="label">Keepsake?</div><div class="win">Made to be handed down</div><div class="meh">Made to be replaced</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5. HOW IT'S MADE ================= -->
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow">Behind the scenes</p>
+      <h2>How your photo becomes a blanket</h2>
+      <p class="lede">[[MADE_STORY: one or two sentences on who weaves it and where, for example the mill, the location, years of experience.]]</p>
+      <!-- EDIT: four photos, 800 x 800 px each, from the mill or your process. -->
+      <div class="made">
+        <figure>
+          <img src="https://placehold.co/800x800/D6E0D2/1B2A41?text=1" width="260" height="260" alt="A customer photo being prepared for weaving">
+          <figcaption><b>Your photo, prepared</b>We turn your image into a pattern the loom can follow.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/800x800/E5D3B8/1B2A41?text=2" width="260" height="260" alt="Colored cotton yarn on the loom">
+          <figcaption><b>The yarn</b>[[Colored cotton threads]] are set up on the loom.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/800x800/D9DDE0/1B2A41?text=3" width="260" height="260" alt="A loom weaving a photo blanket">
+          <figcaption><b>Woven, pass by pass</b>The loom weaves your picture in thread by thread.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/800x800/E8D5CF/1B2A41?text=4" width="260" height="260" alt="A finished blanket with fringe being inspected">
+          <figcaption><b>Finished and checked</b>Edges are finished, the blanket is inspected, then shipped.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 6. PHOTO GUIDE ================= -->
+  <section class="sec alt">
+    <div class="wrap">
+      <p class="eyebrow">Photo guide</p>
+      <h2>How to pick a photo that weaves beautifully</h2>
+      <p class="lede">Weaving turns pictures into thread, so clear photos with strong contrast look best. A few quick rules make a big difference.</p>
+      <!-- EDIT: confirm the specifics (resolution, formats) against your real upload requirements. -->
+      <div class="guide">
+        <div class="gcol">
+          <h3><span class="badge yes">&#10003;</span> Do this</h3>
+          <!-- EDIT: two example photos, 600 x 600 px -->
+          <div class="gimgs">
+            <img src="https://placehold.co/600x600/D6E0D2/1B2A41?text=GOOD+1" width="260" height="260" alt="Example of a sharp, well-lit close-up photo">
+            <img src="https://placehold.co/600x600/D6E0D2/1B2A41?text=GOOD+2" width="260" height="260" alt="Example of a clear photo with a simple background">
+          </div>
+          <ul>
+            <li><b>Use good light.</b> Daylight or a window beats flash and dim rooms.</li>
+            <li><b>Get close.</b> Faces and subjects should fill most of the frame.</li>
+            <li><b>Keep the background simple.</b> One clear subject reads better than a crowd.</li>
+            <li><b>Use the original file.</b> Pick the highest-quality version, ideally at least [[MIN_RESOLUTION]].</li>
+            <li><b>Look for contrast.</b> Clear difference between subject and background.</li>
+          </ul>
+        </div>
+        <div class="gcol">
+          <h3><span class="badge no">&#10005;</span> Skip this</h3>
+          <div class="gimgs">
+            <img src="https://placehold.co/600x600/E8D5CF/1B2A41?text=AVOID+1" width="260" height="260" alt="Example of a blurry, dark photo">
+            <img src="https://placehold.co/600x600/E8D5CF/1B2A41?text=AVOID+2" width="260" height="260" alt="Example of a busy, cluttered photo">
+          </div>
+          <ul>
+            <li><b>Blurry or tiny photos.</b> Screenshots and heavily zoomed images lose detail.</li>
+            <li><b>Dark or backlit shots.</b> Faces turn into shadows.</li>
+            <li><b>Busy backgrounds.</b> Details get lost in the clutter.</li>
+            <li><b>Heavy filters.</b> Start from the unedited original.</li>
+            <li><b>Tiny faces in big group shots.</b> Crop in on the people who matter.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="help">
+        <p><b>Not sure about a photo?</b> [[HELP_OFFER: for example, &ldquo;Send it to us at hello@... and we&rsquo;ll tell you how it will weave.&rdquo;]]</p>
+      </div>
+      <div class="center" style="margin-top:36px;"><a class="btn" href="[[CUSTOMIZER_URL]]">Upload your photo</a></div>
+    </div>
+  </section>
+
+  <!-- ================= 7. OCCASIONS ================= -->
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow">Gift ideas</p>
+      <h2>A gift that means something</h2>
+      <p class="lede">The best gifts are personal. Here are the photos people weave most.</p>
+      <!-- EDIT: four example blankets, 600 x 750 px each, linking to the customizer -->
+      <div class="occ">
+        <a href="[[CUSTOMIZER_URL]]"><img src="https://placehold.co/600x750/E8D5CF/1B2A41?text=FAMILY" width="260" height="325" alt="Family photo woven blanket"><h3>The family</h3><p>For grandparents and holidays</p></a>
+        <a href="[[CUSTOMIZER_URL]]"><img src="https://placehold.co/600x750/E5D3B8/1B2A41?text=PETS" width="260" height="325" alt="Pet photo woven blanket"><h3>The pet</h3><p>For the one who&rsquo;s always on the couch</p></a>
+        <a href="[[CUSTOMIZER_URL]]"><img src="https://placehold.co/600x750/D9DDE0/1B2A41?text=WEDDING" width="260" height="325" alt="Wedding photo woven blanket"><h3>The wedding</h3><p>For anniversaries and newlyweds</p></a>
+        <a href="[[CUSTOMIZER_URL]]"><img src="https://placehold.co/600x750/D6E0D2/1B2A41?text=MEMORIAL" width="260" height="325" alt="Memorial photo woven blanket"><h3>The tribute</h3><p>For someone who&rsquo;s always with you</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 8. SIZES ================= -->
+  <section class="sec alt">
+    <div class="wrap">
+      <p class="eyebrow">Sizes</p>
+      <h2>Pick the size that fits</h2>
+      <!-- EDIT: real sizes and prices -->
+      <div class="sizes">
+        <div class="srow"><div>Size</div><div>Dimensions</div><div>Price</div></div>
+        <div class="srow"><div>[[SIZE_1]]</div><div>[[DIMENSIONS]]</div><div>[[PRICE]]</div></div>
+        <div class="srow"><div>[[SIZE_2]]</div><div>[[DIMENSIONS]]</div><div>[[PRICE]]</div></div>
+        <div class="srow"><div>[[SIZE_3]]</div><div>[[DIMENSIONS]]</div><div>[[PRICE]]</div></div>
+      </div>
+      <div class="center" style="margin-top:36px;"><a class="btn" href="[[CUSTOMIZER_URL]]">Create your blanket</a></div>
+    </div>
+  </section>
+
+  <!-- ================= 9. REVIEWS ================= -->
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow">Reviews</p>
+      <h2>What customers say</h2>
+      <!-- EDIT: paste three REAL reviews and the real names. Do not invent quotes. -->
+      <div class="reviews">
+        <div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>[[REAL REVIEW 1]]</p><div class="who">[[First name, city]]</div></div>
+        <div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>[[REAL REVIEW 2]]</p><div class="who">[[First name, city]]</div></div>
+        <div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>[[REAL REVIEW 3]]</p><div class="who">[[First name, city]]</div></div>
+      </div>
+      <!-- EDIT: four customer photos (with permission), 600 x 600 px each -->
+      <div class="rev-ph">
+        <img src="https://placehold.co/600x600/E8D5CF/1B2A41?text=CUSTOMER+1" width="260" height="260" alt="Customer photo of their woven blanket">
+        <img src="https://placehold.co/600x600/E5D3B8/1B2A41?text=CUSTOMER+2" width="260" height="260" alt="Customer photo of their woven blanket">
+        <img src="https://placehold.co/600x600/D9DDE0/1B2A41?text=CUSTOMER+3" width="260" height="260" alt="Customer photo of their woven blanket">
+        <img src="https://placehold.co/600x600/D6E0D2/1B2A41?text=CUSTOMER+4" width="260" height="260" alt="Customer photo of their woven blanket">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 10. FAQ ================= -->
+  <section class="sec alt">
+    <div class="wrap">
+      <p class="eyebrow">Questions</p>
+      <h2>Good to know</h2>
+      <!-- EDIT: replace every [[ ]] answer with your real policy. Delete questions you don't want. -->
+      <div class="faq">
+        <details><summary>How long does it take to get my blanket?</summary><p>[[TURNAROUND_DETAIL: production time plus shipping time, and any holiday cutoff.]]</p></details>
+        <details><summary>What kind of photo works best?</summary><p>A sharp, well-lit photo with a clear subject and a simple background. See the photo guide above. [[MIN_RESOLUTION]] or larger is ideal.</p></details>
+        <details><summary>Can I see it before it&rsquo;s made?</summary><p>[[PREVIEW_POLICY: do customers see a preview or proof before production?]]</p></details>
+        <details><summary>What is the blanket made of?</summary><p>[[MATERIAL_DETAIL: fiber content, weight, size, edge finish.]]</p></details>
+        <details><summary>How do I wash it?</summary><p>[[CARE_INSTRUCTIONS]]</p></details>
+        <details><summary>What if I&rsquo;m not happy with it?</summary><p>[[GUARANTEE_POLICY: returns, remakes, what happens if there is a flaw.]] Questions? Contact us at [[SUPPORT_EMAIL]].</p></details>
+        <details><summary>Can I order more than one, or ship it as a gift?</summary><p>[[GIFT_POLICY: multiple blankets, shipping to another address, gift messages.]]</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 11. FINAL CTA ================= -->
+  <section class="final">
+    <div class="wrap">
+      <h2>Turn your favorite photo<br>into something to hold.</h2>
+      <p>One photo. Woven into soft cotton. A blanket that outlasts the trends.</p>
+      <a class="btn" href="[[CUSTOMIZER_URL]]">Create your blanket</a>
+      <p class="micro">[[GUARANTEE]]</p>
+    </div>
+  </section>
+
+  <div class="pad-bottom"></div>
+
+  <!-- Sticky button on phones only -->
+  <div class="sticky"><a class="btn" href="[[CUSTOMIZER_URL]]">Create your blanket</a></div>
+
+</div>
+
+</body>
+</html>
